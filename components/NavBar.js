@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
@@ -12,7 +12,17 @@ const iconStyle = {width: '50px'}
 
 export default function NavBar () {
    const [inputVal, setInputVal] = useState('')
-   console.log(userAvatar)
+   const [user, setUser] = useState()
+
+   useEffect(() => {
+      fetch('https://my-json-server.typicode.com/truongducvien/facebookClone/users')
+         .then( res => res.json())
+         .then(data => setUser(data))
+   }, [])
+
+   useEffect(() => {
+      if(user) console.log(user.image)
+   })
 
    const handleChange = (e) => {
       setInputVal(e.target.value)
@@ -46,7 +56,7 @@ export default function NavBar () {
             <FontAwesomeIcon style={iconStyle} icon={faFacebookMessenger}/>
             <FontAwesomeIcon style={iconStyle} icon={faBell}/>
             <div>
-               <img src={userAvatar.src} alt="avatar"/>
+               {user && <img src={user.image} alt="avatar"/>}
             </div>
          </div>
 
