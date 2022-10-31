@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+.options{
+   padding: 5px;
+
+   .option{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 44px;
+      padding: 0 8px;
+      border-radius: 10px;
+      svg{
+         color: #1d8df7
+      }
+      span{
+         margin-left: 10px;
+      }
+   }
+   .option:hover{
+      cursor: pointer;
+      background-color: #ededed;
+   }
+   .imageContainer{
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img{
+         width: 28px;
+      }
+   }
+}

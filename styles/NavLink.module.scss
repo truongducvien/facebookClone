@@ -1,0 +1,8 @@
+$fbColor: #0776e8;
+
+.active{
+   border-bottom: 3px solid $fbColor;
+   svg{
+      color:$fbColor !important;
+   }
+}

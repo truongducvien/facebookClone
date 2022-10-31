@@ -1,9 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Aside from '../components/Aside'
+import Main from '../components/Main'
+import styles from '../styles/Home.module.scss'
+import LeftAside from '../components/home/LeftAside';
+
 
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +16,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Aside>
+        <LeftAside />
+      </Aside>
+
+      <Main>
+        Content for home
+      </Main>
+
+      <Aside>
+        <h1>Right Aside for Home</h1>
+      </Aside>
       
     </div>
   )

@@ -1,4 +1,107 @@
+
+@import './variables.scss';
+
 .navbars {
    display: flex;
    justify-content: space-between;
+   align-items: center;
+   height: 56px;
+   background-color: white;
+   box-shadow: 1px 1px 5px 1px #80808063;
+
+   .general{
+      flex-basis: 25%;
+      @include spaceEvenly;
+
+      .facebookIcon{
+         color: #0776e8;
+         width: 40px;
+         height: 40px;
+      }
+      .searchContainer{
+         display: flex;
+         align-items: center;
+         width: 240px;
+         height: 40px;
+         padding-left: 15px;
+         border-radius: 25px;
+         background-color: $grey-background;
+
+         .searchIcon{
+            width: 15px;
+         }
+         input{
+            padding-left: 10px;
+            background-color: $grey-background;
+            outline: unset;
+            border: unset;
+         }
+      }
+   }
+   .commonContainer{
+      flex-basis: 45%;
+      @include spaceEvenly;
+      height: 100%;
+      align-items: center;
+
+      div{
+         flex-basis: 15%;
+         @include centerItem;
+         height: 100%;
+         a{
+            @include centerItem;
+            width: 100%;
+            height: 100%
+         }
+      }
+      div:hover{
+         background-color: $grey-background;
+         border-radius: 10px;
+      }
+      svg{
+         width: 25px;
+         height: 25px;
+         color: grey;
+      }
+   }
+   .personalContainer{
+      flex-basis: 25%;
+      display: flex;
+      justify-content: flex-end;
+
+      div{
+         @include centerItem;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         margin-right: 15px;
+         background-color: $grey-background;
+         
+         a{
+            width: 100%;
+            height: 100%;
+            @include centerItem;
+            
+            svg{
+               width: 15px;
+               height: 15px;
+            }
+         }
+      }
+      div:hover{
+         cursor: pointer;
+         background-color: #e1e3e7;
+      }
+      .avatarContainer{
+         display: flex;
+         width: 40px;
+         height: 40px;
+         overflow: hidden;
+         border-radius: 50%;
+
+         .avatar{
+            width: 70px;
+         }
+      }
+   }
 }

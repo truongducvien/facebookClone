@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+.shortcuts{
+   padding: 5px;
+
+   h4{
+      margin: 15px 0;
+   }
+   .item{
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px;
+      border-radius: 10px;
+
+      .imageContainer{
+         @include centerItem;
+         width: 28px;
+         height: 28px;
+         border-radius: 6px;
+         overflow: hidden;
+
+         img{
+            height: 30px
+         }
+      }
+      span{
+         flex-basis: 85%;
+         margin-left: 10px;
+      }
+   }
+   .item:hover{
+      cursor: pointer;
+      background-color: #ededed;
+   }
+}

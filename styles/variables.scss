@@ -1,0 +1,11 @@
+$grey-background: #f0f2f5;
+
+@mixin spaceEvenly {
+   display: flex;
+   justify-content: space-evenly;
+}
+@mixin centerItem {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
