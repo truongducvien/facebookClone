@@ -1,3 +1,9 @@
 .main{
    flex-grow: 1;
+   
+   .container{
+      width: 700px;
+      min-height: calc(100vh - 56px);
+      margin: auto;
+   }
 }

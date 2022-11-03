@@ -24,7 +24,7 @@ export default function Options () {
    }, [isShowLess]);
 
    useEffect(() => {
-      fetch(API_URL)
+      fetch(`${API_URL}/users`)
          .then(res => res.json())
          .then(data => setUser(data))
    }, [])
@@ -36,7 +36,7 @@ export default function Options () {
                <div className={styles.imageContainer}>
                   <img src={avatar.src} alt='Avatar'/>
                </div>
-               <span>{user.name}</span>
+               <span><strong>{user.name}</strong></span>
             </div>
          </Link>
 

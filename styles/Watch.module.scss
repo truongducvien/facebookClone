@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+.watch{
+    
+    h2:hover{
+        cursor: pointer;
+        background-color: white;
+        border-radius: 10px;
+    }
+}

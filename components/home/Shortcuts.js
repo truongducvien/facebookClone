@@ -5,13 +5,6 @@ import styles from '../../styles/Shortcuts.module.scss';
 
 
 export default function Shortcuts () {
-
-   useEffect(() => {
-      fetch('http://localhost:3000/api/posts')
-         .then(res => res.json())
-         .then(data => console.log(data))
-   }, [])
-
    return (
       <div className={styles.shortcuts}>
          <h4>Your shortcuts</h4>

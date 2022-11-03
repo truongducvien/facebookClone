@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+.stories{
+    height: 290px;
+    border-radius: 10px;
+    box-shadow: -1px -1px 4px -1px #80808073;
+    background-color: white;
+
+
+    :global(.ant-tabs-nav-list){
+        width: 100%;
+    
+        :global(.ant-tabs-tab){
+            width: calc(100%/3);
+
+            div{
+                width: 100%;
+                text-align: center;
+                color: grey
+            }
+        }
+        :global(.ant-tabs-tab-active){
+            div{
+                color: $facebook-color; 
+            }
+        }
+        :global(.ant-tabs-ink-bar){
+            width: calc(100%/3);
+        }
+    }
+
+} 

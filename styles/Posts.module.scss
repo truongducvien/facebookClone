@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+.posts{
+    
+    .post{
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: -1px -1px 4px -1px #80808073;
+        background-color: white;
+        
+        .info{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px; 
+
+            div{
+                @include centerItem;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden; 
+
+                img{
+                    width: 40px;
+                }
+            }
+            h3{
+                margin-left: 10px;
+                display: block;
+            }
+        }
+        .content{
+            .detail{
+                padding: 0 15px 10px; 
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

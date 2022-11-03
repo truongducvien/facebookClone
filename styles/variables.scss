@@ -1,8 +1,10 @@
 $grey-background: #f0f2f5;
+$facebook-color: #0776e8;
 
 @mixin spaceEvenly {
    display: flex;
    justify-content: space-evenly;
+   align-items: center;
 }
 @mixin centerItem {
    display: flex;

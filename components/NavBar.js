@@ -45,31 +45,31 @@ export default function NavBar () {
          </div>
 
          <div className={styles.commonContainer}>
-            <NavLink href='/'>
+            <NavLink href='/' title="Home">
                <FontAwesomeIcon icon={faHouseUser}/>
             </NavLink>
 
-            <NavLink href='/watch'>
+            <NavLink href='/watch' title="Watch">
                <FontAwesomeIcon icon={faFilm}/>
             </NavLink>
 
-            <NavLink href='/marketplace'>
+            <NavLink href='/marketplace' title="Market Place">
                <FontAwesomeIcon icon={faShop}/>
             </NavLink>
 
-            <NavLink href='/groups'>
+            <NavLink href='/groups' title="Group">
                <FontAwesomeIcon icon={faPeopleLine}/>
             </NavLink>
          </div>
 
          <div className={styles.personalContainer}>
-            <NavLink href='/menu'>
+            <NavLink href='/menu' title="Menu">
                <FontAwesomeIcon icon={faBars}/>
             </NavLink>
-            <NavLink href='/messenger'>
+            <NavLink href='/messenger' title="Messenger">
                <FontAwesomeIcon icon={faFacebookMessenger}/>
             </NavLink>
-            <NavLink href='/notifications'>
+            <NavLink href='/notifications' title="Notification">
                <FontAwesomeIcon icon={faBell}/>
             </NavLink>
             <div className={styles.avatarContainer}>

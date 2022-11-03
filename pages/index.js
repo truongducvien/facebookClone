@@ -3,10 +3,25 @@ import Aside from '../components/Aside'
 import Main from '../components/Main'
 import styles from '../styles/Home.module.scss'
 import LeftAside from '../components/home/LeftAside';
+import Stories from '../components/home/Stories';
+import InputForm from '../components/home/InputForm';
+import Posts from '../components/home/Posts';
+import { API_URL } from '../assets/data/pageData';
 
 
+export async function getStaticProps () {
+  const res = await fetch(`${API_URL}/posts`);
+  const data = await res.json();
 
-export default function Home() {
+  return {
+      props: {
+          posts: data
+      }
+  }
+}
+
+
+export default function Home( {posts} ) {
 
   return (
     <div className={styles.container}>
@@ -21,7 +36,9 @@ export default function Home() {
       </Aside>
 
       <Main>
-        Content for home
+        <Stories />
+        <InputForm />
+        <Posts posts={posts}/>
       </Main>
 
       <Aside>
